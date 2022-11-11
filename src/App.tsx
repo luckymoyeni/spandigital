@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Flex } from "@chakra-ui/react";
-import Sidebar from "./Components/Sidebar";
-import Header from "./Components/Header";
+import {Sidebar} from "./Components/Sidebar";
+import {Header} from "./Components/Header";
 import { Gallery } from "./Components/Gallery";
 
 export default function App() {

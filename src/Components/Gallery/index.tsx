@@ -49,7 +49,7 @@ export const Gallery: React.FC<{ topic: string | null; isOpen: boolean }> = ({
     );
 
   return (
-    <Flex flexDirection={"column"}>
+    <Flex flexDirection={"column"} data-testid="sidebar">
       <DisplayGrid currentImages={currentImages} isOpen={isOpen} />
       <FooterNavigation
         isOpen={isOpen}

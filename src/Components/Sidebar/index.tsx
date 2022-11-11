@@ -10,7 +10,7 @@ interface Props {
   topic: string;
 }
 
-const SidebarContent = ({
+export const SidebarContent = ({
   setTopic,
   topic,
 }: {
@@ -56,7 +56,7 @@ const SidebarContent = ({
   );
 };
 
-const Sidebar = ({ isOpen, onClose, setTopic, topic }: Props) => {
+export const Sidebar = ({ isOpen, onClose, setTopic, topic }: Props) => {
   return (
     <>
       {isOpen ? (
@@ -70,21 +70,21 @@ const Sidebar = ({ isOpen, onClose, setTopic, topic }: Props) => {
           display={"flex"}
           flex={1}
           flexDirection="column"
+          data-testid="sidebar"
         >
           <Flex flexDirection="row-reverse">
             <GrClose
               size={20}
               style={{ marginBottom: "10px" }}
               onClick={() => onClose()}
+              data-testid="close"
             />
           </Flex>
           <SidebarContent setTopic={setTopic} topic={topic} />
         </Box>
       ) : (
-        <></>
+        <div  data-testid="sidebar"></div>
       )}
     </>
   );
 };
-
-export default Sidebar;

@@ -7,18 +7,18 @@ interface Props {
   onClose: any;
 }
 
-const Header = ({ title, isOpen, onClose }: Props) => {
+export const Header = ({ title, isOpen, onClose }: Props) => {
   return (
     <Flex bg="teal" p={4} color="white" justifyContent="center">
       <Box flex="1">
         {!isOpen && <GiHamburgerMenu size={25} onClick={() => onClose()} />}
       </Box>
       <Center flex="1" h="40px">
-        <Text fontSize="xl">{title}</Text>
+        <Text fontSize="xl" data-testid="topicTitle">
+          {title}
+        </Text>
       </Center>
       <Box flex="1" />
     </Flex>
   );
 };
-
-export default Header;

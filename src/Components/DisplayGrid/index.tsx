@@ -11,6 +11,7 @@ export const DisplayGrid = ({ currentImages, isOpen }: any) => {
       className="grid-rail"
       gridTemplateRows="1fr 1fr"
       templateColumns="1fr 1fr 1fr"
+      data-testid="displayGrid"
     >
       {currentImages.map((x: any, index: number) =>
         index % 2 === 0 ? (
