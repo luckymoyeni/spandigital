@@ -1,12 +1,13 @@
 import React from "react";
 import { Grid, Image } from "@chakra-ui/react";
-export const DisplayGrid = ({ currentImages }: any) => {
+export const DisplayGrid = ({ currentImages, isOpen }: any) => {
   return (
     <Grid
       gridGap={5}
-      gap={3}
-      p={4}
-      h={"81vh"}
+      gap={4}
+      p={5}
+      height={"81vh"}
+      width={isOpen ? "80vw" : "100vw"}
       className="grid-rail"
       gridTemplateRows="1fr 1fr"
       templateColumns="1fr 1fr 1fr"

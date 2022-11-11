@@ -2,22 +2,14 @@ import { Box, Center, Text, Flex } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 interface Props {
-  onShowSidebar: any;
-  showSidebarButton?: boolean;
   title: string;
   isOpen: boolean;
   onClose: any;
 }
 
-const Header = ({
-  showSidebarButton = true,
-  onShowSidebar,
-  title,
-  isOpen,
-  onClose,
-}: Props) => {
+const Header = ({ title, isOpen, onClose }: Props) => {
   return (
-    <Flex bg="tomato" p={4} color="white" justifyContent="center">
+    <Flex bg="teal" p={4} color="white" justifyContent="center">
       <Box flex="1">
         {!isOpen && <GiHamburgerMenu size={25} onClick={() => onClose()} />}
       </Box>

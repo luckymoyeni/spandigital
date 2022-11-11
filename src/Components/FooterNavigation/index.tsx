@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import React, { FC } from "react";
+import React from "react";
 import { BsArrowLeftSquare, BsArrowRightSquare } from "react-icons/bs";
 
 interface IfooterNavigation {

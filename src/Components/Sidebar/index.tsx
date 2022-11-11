@@ -34,12 +34,12 @@ const SidebarContent = ({
   return (
     <VStack>
       {data?.data?.map((x: any) => {
-        if (x.title === topic) {
+        if (x?.slug === topic) {
           return (
             <Button
               onClick={() => setTopic(x?.slug)}
               w="100%"
-              bg="tomato"
+              bg="teal"
               color="white"
             >
               {x?.title}
@@ -61,13 +61,15 @@ const Sidebar = ({ isOpen, onClose, setTopic, topic }: Props) => {
     <>
       {isOpen ? (
         <Box
-          position="fixed"
           left={0}
           p={5}
           w="300px"
           top={0}
-          h="100%"
+          h="100vh"
           bg="#dfdfdf"
+          display={"flex"}
+          flex={1}
+          flexDirection="column"
         >
           <Flex flexDirection="row-reverse">
             <GrClose

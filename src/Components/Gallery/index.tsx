@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Center, Grid, Heading } from "@chakra-ui/react";
+import { Center, Flex, Heading } from "@chakra-ui/react";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { FooterNavigation } from "../FooterNavigation";
@@ -49,14 +49,14 @@ export const Gallery: React.FC<{ topic: string | null; isOpen: boolean }> = ({
     );
 
   return (
-    <>
-      <DisplayGrid currentImages={currentImages} />
+    <Flex flexDirection={"column"}>
+      <DisplayGrid currentImages={currentImages} isOpen={isOpen} />
       <FooterNavigation
         isOpen={isOpen}
         selector={selector}
         setSelector={setSelector}
         images={images}
       />
-    </>
+    </Flex>
   );
 };
